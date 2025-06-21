@@ -3,3 +3,6 @@ dist
 *.pyc
 *.o
 *.egg-info
+.venv
+venv 
+*.lock
