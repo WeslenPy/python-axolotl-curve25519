@@ -1,5 +1,4 @@
 from setuptools import setup, Extension
-from Cython.Build import cythonize
 from glob import glob
 
 sources = [
@@ -39,5 +38,5 @@ setup(
         "Cython==3.1.2",
         "setuptools==71.0.4"
     ],
-    ext_modules=cythonize(module_list=extensions, compiler_directives={"language_level": 3, "binding": True}),
+    ext_modules = [extensions],
 )
