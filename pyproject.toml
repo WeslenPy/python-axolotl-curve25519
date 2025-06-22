@@ -1,5 +1,5 @@
 [project]
-name = "python-axolotl-curve25519"
+name = "axolotl_curve25519"
 version = "1.0.2"
 description = ""
 authors = [
