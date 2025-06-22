@@ -30,7 +30,7 @@ extensions = [
 
 setup(
     name="python-axolotl-curve25519",
-    version="0.4.2",
+    version="1.0.2",
     author="Tarek Galal",
     author_email="tare2.galal@gmail.com",
     description="curve25519 with ed25519 signatures, used by libaxolotl",
