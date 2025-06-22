@@ -152,7 +152,24 @@ curve25519_functions[] = {
 };
 
 
-#if PY_MAJOR_VERSION >= 3
+#if PY_MAJOR_VERSION > 3 || (PY_MAJOR_VERSION == 3 && PY_MINOR_VERSION >= 10)
+    static struct PyModuleDef
+    curve25519_module = {
+        PyModuleDef_HEAD_INIT,
+        "axolotl_curve25519",
+        NULL,
+        -1,
+        curve25519_functions,
+    };
+
+    PyObject *
+    PyInit_axolotl_curve25519(void)
+    {
+        return PyModule_Create(&curve25519_module);
+    }
+
+
+#elif PY_MAJOR_VERSION >= 3
     static struct PyModuleDef
     curve25519_module = {
         PyModuleDef_HEAD_INIT,
@@ -167,6 +184,8 @@ curve25519_functions[] = {
     {
         return PyModule_Create(&curve25519_module);
     }
+
+
 #else
 
     PyMODINIT_FUNC
