@@ -1,0 +1,18 @@
+[project]
+name = "python-axolotl-curve25519"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "WeslenPy",email = "weslenjhony@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "setuptools (==71.0.4)",
+    "cython (==3.1.2)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
