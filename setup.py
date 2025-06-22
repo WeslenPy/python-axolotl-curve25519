@@ -35,8 +35,7 @@ setup(
     description="curve25519 with ed25519 signatures, used by libaxolotl",
     license="GPLv3",
     install_requires=[
-        "Cython==3.1.2",
-        "setuptools==71.0.4"
+        "setuptools>=71.0.4"
     ],
     ext_modules = [extensions],
 )
